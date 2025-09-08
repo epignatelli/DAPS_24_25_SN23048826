@@ -1,0 +1,12 @@
+numpy
+scipy
+pandas
+scikit-learn
+requests
+pymongo
+dnspython
+matplotlib
+seaborn
+datetime
+yfinance
+torch

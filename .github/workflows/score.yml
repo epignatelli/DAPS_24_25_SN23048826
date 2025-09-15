@@ -28,13 +28,14 @@ jobs:
       - name: Setup Miniconda
         id: setup-miniconda
         run: |
+          pwd
           .github/workflows/setup.sh
 
       - name: Check code quality
         id: linting
         run: |
           pip install pylint
-          MESSAGE=$(./lint.sh)
+          MESSAGE=$(.github/workflows/lint.sh)
 
           echo 'MESSAGE<<EOF' >> $GITHUB_ENV
           echo "<pre><code>$MESSAGE</code></pre>" >> $GITHUB_ENV
@@ -50,4 +51,4 @@ jobs:
 
       - name: Check for reproducibility
         run: |
-          ./reproduce.sh
+          .github/workflows/reproduce.sh

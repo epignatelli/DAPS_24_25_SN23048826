@@ -5,8 +5,8 @@ pwd
 echo "Current working directory: $(pwd)"
 
 # setup 
-./setup.sh
+.github/workflows/setup.sh
 # lint code
-./lint.sh
+.github/workflows/lint.sh
 # reproduce results
-./reproduce.sh
+.github/workflows/reproduce.sh

@@ -28,7 +28,7 @@ jobs:
       - name: Setup Miniconda
         id: setup-miniconda
         run: |
-          ./setup.sh
+          .github/workflows/setup.sh
 
       - name: Check code quality
         id: linting
